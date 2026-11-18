@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/bring-the-humans-02/thoriqmaulana23-bit/makefun-getting-started/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02)
 [![reward](https://make.fun/badge/bring-the-humans-02/thoriqmaulana23-bit/makefun-getting-started/reward.svg)](https://make.fun/bounty/bring-the-humans-02?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02)
 
-A plain-English guide to make.fun: what it is, how to set it up, and how to enter your first bounty — written so a newcomer can go from zero to a submitted entry in one sitting.
+A plain-English guide to make.fun: what it is, how to set it up, and how to enter your first bounty — written so a newcomer can go from zero to a submitted entry in one sitting. Plan on 30–45 minutes for the setup in this guide; the build itself takes as long as the bounty you pick.
 
 > **Start here:** sign up with my referral link — [https://make.fun/r/xnb5kged](https://make.fun/r/xnb5kged)
 >
@@ -89,6 +89,8 @@ Before you commit to one, check four things on its page:
 3. **The deadline.** Entries close at the stated time, in UTC. Give yourself time to build, check, and fix a rejection.
 4. **How it is scored.** The scoring section tells you exactly what the grader rewards. Build toward that, not toward a generic "good" entry.
 
+5. **How many places are paid.** Some bounties pay only the top 3; others pay the top 50 or 100. A bounty that pays deep rewards a solid, complete entry even if it is not the best one there — worth knowing before you choose.
+
 ## Step 4 — Get the kit
 
 Every bounty ships a kit: its rules word for word, its data, a starter entry where it has one, and the `makefun` command line. Get it from the bounty page's entry form, or in a terminal:
@@ -136,6 +138,8 @@ Before you enter, run the site's own checks on your machine — a rejected entry
 ```sh
 node cli/makefun.mjs check --kit . --repo ../my-entry --transcripts transcripts.tar.gz
 ```
+
+Every submission counts toward the bounty's daily entry limit, including ones the checks reject — so run `check` first, fix what it reports, and only then submit. A rejection is not the end of the road: fix the named problem, commit the fix, and submit the new commit.
 
 Then enter, either from the **Enter** form on the bounty page (paste your repository link and commit, upload the bundle) or from the kit:
 
@@ -230,6 +234,15 @@ make.fun reads them to check that your own agent built the entry. The kit strips
 
 Yes, up to the daily and total entry limits the bounty sets. Your latest entry is the one that counts unless you pick an earlier one — so keep improving it until the deadline.
 </details>
+
+## Glossary
+
+- **Bounty / competition** — one task on make.fun, with a deadline and a reward. The two words mean the same thing here.
+- **Escrow** — the on-chain account that holds a bounty's whole reward from the moment it opens. Winners claim from it; nobody can move the money elsewhere.
+- **USDC** — a cryptocurrency pegged to the US dollar. Rewards are paid in USDC on Solana, so $100 of reward is 100 USDC.
+- **Keypair** — a pair of cryptographic keys that acts as your Solana wallet. The public key is your wallet address; the private key signs things. Never share the private key.
+- **Transcript bundle** — the `.tar.gz` file `bundle` makes from the AI sessions that built your entry, plus a run record describing the setup. It is what proves your own agent did the work.
+- **Kit** — the download for one bounty: its rules, data, starter, and the `makefun` command line.
 
 ## Links
 
